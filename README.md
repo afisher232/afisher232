@@ -3,10 +3,10 @@ import tweepy
 from datetime import datetime
 
 # Twitter API credentials
-consumer_key = "your_consumer_key"
-consumer_secret = "your_consumer_secret"
-access_token = "your_access_token"
-access_token_secret = "your_access_token_secret"
+consumer_key = "2Jz6eDNC1lmFnjKdgpAVKSYAq"
+consumer_secret = "joCLK0Aw6K8AtnwnPvUCfgkHyBk7FfRp1tTCdcoYycW0HcxL7s"
+access_token = "1546159325470756865-B6sWAOd3oj0zuQEOV1bGsM3fTj74a2"
+access_token_secret = "1gFPZnWScpmQCjbt1zFORw6XRFuRnDYkPYAzOdt56OalN"
 
 # Authenticate
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
@@ -20,10 +20,10 @@ def scrape_user_tweets(username, start_date, end_date, max_tweets=100):
     return tweets
 
 if __name__ == "__main__":
-    username = input("Enter the Twitter username: ")
-    start_date_str = input("Enter the start date (YYYY-MM-DD): ")
-    end_date_str = input("Enter the end date (YYYY-MM-DD): ")
-    max_tweets = int(input("Enter the maximum number of tweets to scrape: "))
+    username = input("@ExtinctionR")
+    start_date_str = input("(2024-01-01)")
+    end_date_str = input("(2024-02-28)")
+    max_tweets = int(input("100"))
 
     start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
     end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
